@@ -1,0 +1,19 @@
+.Machine {
+  box-sizing: border-box;
+  border: 5px solid #ccc;
+  background-color: purple;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.Machine-winner {
+  padding: 1rem;
+  background-color: green;
+}
+
+.Machine-loser {
+  padding: 1rem;
+  background-color: red;
+}
