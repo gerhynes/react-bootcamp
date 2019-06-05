@@ -6,8 +6,34 @@
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
+  cursor: pointer;
 }
 
 .Pokecard-data {
   font-size: 80%;
+}
+
+.Pokecard-title {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.Pokecard-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  background: #eceff1;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.Pokecard img {
+  transition: all ease-in-out 500ms;
+}
+
+.Pokecard img:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
 }
