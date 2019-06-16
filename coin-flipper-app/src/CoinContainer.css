@@ -1,0 +1,15 @@
+.CoinContainer button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-size: 120%;
+  background-color: #003194;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.CoinContainer button:hover,
+.CoinContainer button:active {
+  background-color: #101e86;
+}
