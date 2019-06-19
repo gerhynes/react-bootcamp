@@ -26,6 +26,11 @@ export default class BoxesContainer extends Component {
     const boxes = Array.from({ length: this.props.numBoxes }).map(() => (
       <Box colors={this.props.allColors} />
     ));
-    return <div className="BoxesContainer">{boxes}</div>;
+    return (
+      <div className="BoxesContainer">
+        <h1>Click on any box to change its colour.</h1>
+        <div className="BoxesContainer__boxes">{boxes}</div>
+      </div>
+    );
   }
 }
