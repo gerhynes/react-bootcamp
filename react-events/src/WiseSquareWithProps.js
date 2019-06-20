@@ -30,7 +30,7 @@ export default class WiseSquare extends Component {
 }
 
 /*
- Three common ways to bind this
+ Three common ways to bind this:
 
  1. Inline
   - Very explicit
