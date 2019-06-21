@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import WiseSquare from "./WiseSquare";
-import AnnoyingForm from "./AnnoyingForm";
-import CopyDemo from "./CopyDemo";
-import WiseSquareWithProps from "./WiseSquareWithProps";
-import ExperimentalSquare from "./ExperimentalSquare";
+// import WiseSquare from "./WiseSquare";
+// import AnnoyingForm from "./AnnoyingForm";
+// import CopyDemo from "./CopyDemo";
+// import WiseSquareWithProps from "./WiseSquareWithProps";
+// import ExperimentalSquare from "./ExperimentalSquare";
+import ButtonList from "./ButtonList";
 import "./App.css";
 
 class App extends Component {
@@ -11,11 +12,12 @@ class App extends Component {
     return (
       <div className="App">
         <h1>React Events!</h1>
-        <WiseSquare />
+        {/* <WiseSquare />
         <AnnoyingForm />
         <CopyDemo />
         <WiseSquareWithProps />
-        <ExperimentalSquare />
+        <ExperimentalSquare /> */}
+        <ButtonList />
       </div>
     );
   }
