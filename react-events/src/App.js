@@ -4,7 +4,9 @@ import React, { Component } from "react";
 // import CopyDemo from "./CopyDemo";
 // import WiseSquareWithProps from "./WiseSquareWithProps";
 // import ExperimentalSquare from "./ExperimentalSquare";
-import ButtonList from "./ButtonList";
+// import ButtonList from "./ButtonList";
+import NumberList from "./NumberList";
+import BetterNumberList from "./BetterNumberList";
 import "./App.css";
 
 class App extends Component {
@@ -16,8 +18,10 @@ class App extends Component {
         <AnnoyingForm />
         <CopyDemo />
         <WiseSquareWithProps />
-        <ExperimentalSquare /> */}
-        <ButtonList />
+        <ExperimentalSquare /> */
+        /* <ButtonList /> */}
+        <NumberList />
+        <BetterNumberList/>
       </div>
     );
   }
