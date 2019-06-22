@@ -24,3 +24,16 @@ export default class NumberList extends Component {
     );
   }
 }
+
+// Passing functions to child components
+
+// This is a very common pattern in React
+// Children are often not stateful but tell their parents to change state
+
+// Data flow
+/* A parent component defines a function 
+    -> the fn is passed as a prop to a child component 
+      -> the child invokes the prop 
+        -> the parent fn is called, setting a new state 
+          -> the parent is component is re-rendered along with its children
+*/
