@@ -22,6 +22,11 @@
   font-size: 2rem;
 }
 
+.Hangman-wrong-guesses {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .Hangman-btns {
   text-align: center;
   display: inline-block;
