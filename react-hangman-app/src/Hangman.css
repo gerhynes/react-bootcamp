@@ -22,7 +22,8 @@
   font-size: 2rem;
 }
 
-.Hangman-wrong-guesses {
+.Hangman-wrong-guesses,
+.Hangman-msg {
   font-size: 1.2rem;
   font-weight: bold;
 }
