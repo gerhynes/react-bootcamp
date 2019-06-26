@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Cell from "./Cell";
 import "./Board.css";
 
-/** Game board of Lights out.
+/* Game board of Lights Out.
  *
  * Properties:
  *
@@ -44,7 +44,7 @@ class Board extends Component {
     };
   }
 
-  /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
+  /* Create a board nrows high/ncols wide, each cell randomly lit or unlit */
 
   createBoard() {
     let board = [];
@@ -59,8 +59,7 @@ class Board extends Component {
     return board;
   }
 
-  /** handle changing a cell: update board & determine if winner */
-
+  /* Handle changing a cell: update board & determine if winner */
   flipCellsAround(coord) {
     let { ncols, nrows } = this.props;
     let board = this.state.board;
@@ -68,46 +67,29 @@ class Board extends Component {
 
     function flipCell(y, x) {
       // if this coord is actually on board, flip it
-
       if (x >= 0 && x < ncols && y >= 0 && y < nrows) {
         board[y][x] = !board[y][x];
       }
     }
 
+    // TODO: flip this cell and the cells around it
     flipCell(y, x); // Flip initial cell
     flipCell(y, x - 1); // Flip left
     flipCell(y, x + 1); // Flip right
     flipCell(y - 1, x); // Flip above
     flipCell(y + 1, x); // Flip below
 
-    // TODO: flip this cell and the cells around it
-
     // win when every cell is turned off
-    // TODO: determine is the game has been won
-
+    // TODO: determine if the game has been won
     // Check if every cell in every row is false
     let hasWon = board.every(row => row.every(cell => !cell));
 
     this.setState({ board, hasWon });
   }
 
-  /** Render game board or winning message. */
-
-  render() {
-    // if the game is won, just show a winning msg & render nothing else
-    if (this.state.hasWon) {
-      return (
-        <div className="Board-title">
-          <div className="winner">
-            <span className="neon-orange">YOU</span>
-            <span className="neon-blue">WIN!</span>
-          </div>
-        </div>
-      );
-    }
-
-    // TODO
-    // make table board
+  // TODO
+  // make table board
+  makeTable() {
     let tableBoard = [];
     for (let y = 0; y < this.props.nrows; y++) {
       let row = [];
@@ -123,20 +105,34 @@ class Board extends Component {
       }
       tableBoard.push(<tr key={y}>{row}</tr>);
     }
+    return (
+      <table className="Board">
+        <tbody>{tableBoard}</tbody>
+      </table>
+    );
+  }
 
+  // Render game board or winning message.
+  // If the game is won, just show a winning msg & render nothing else
+  render() {
     return (
       <div>
-        <div className="Board-title">
-          <div className="neon-orange">Lights</div>
-          <div className="neon-blue">Out</div>
-        </div>
-        <table className="Board">
-          <tbody>{tableBoard}</tbody>
-        </table>
+        {this.state.hasWon ? (
+          <div className="winner">
+            <span className="neon-orange">YOU</span>
+            <span className="neon-blue">WIN!</span>
+          </div>
+        ) : (
+          <div>
+            <div className="Board-title">
+              <div className="neon-orange">Lights</div>
+              <div className="neon-blue">Out</div>
+            </div>
+            {this.makeTable()}
+          </div>
+        )}
       </div>
     );
-
-    // TODO
   }
 }
 
