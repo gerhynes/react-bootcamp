@@ -52,7 +52,7 @@ export default class NewBoxForm extends Component {
             onChange={this.handleChange}
           />
         </div>
-        <button>Add New Box!</button>
+        <button className="button-primary">Add New Box!</button>
       </form>
     );
   }
