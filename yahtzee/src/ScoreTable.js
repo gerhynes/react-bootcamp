@@ -27,7 +27,7 @@ class ScoreTable extends Component {
     return totalScore;
   }
   render() {
-    const { scores, doScore } = this.props;
+    const { scores, doScore, rolling } = this.props;
 
     return (
       <div className="ScoreTable">
@@ -40,36 +40,42 @@ class ScoreTable extends Component {
                 score={scores.ones}
                 description={ones.description}
                 doScore={evt => doScore("ones", ones.evalRoll)}
+                rolling={rolling}
               />
               <RuleRow
                 name="Twos"
                 score={scores.twos}
                 description={twos.description}
                 doScore={evt => doScore("twos", twos.evalRoll)}
+                rolling={rolling}
               />
               <RuleRow
                 name="Threes"
                 score={scores.threes}
                 description={threes.description}
                 doScore={evt => doScore("threes", threes.evalRoll)}
+                rolling={rolling}
               />
               <RuleRow
                 name="Fours"
                 score={scores.fours}
                 description={fours.description}
                 doScore={evt => doScore("fours", fours.evalRoll)}
+                rolling={rolling}
               />
               <RuleRow
                 name="Fives"
                 score={scores.fives}
                 description={fives.description}
                 doScore={evt => doScore("fives", fives.evalRoll)}
+                rolling={rolling}
               />
               <RuleRow
                 name="Sixes"
                 score={scores.sixes}
                 description={sixes.description}
                 doScore={evt => doScore("sixes", sixes.evalRoll)}
+                rolling={rolling}
               />
             </tbody>
           </table>
@@ -83,18 +89,21 @@ class ScoreTable extends Component {
                 score={scores.threeOfKind}
                 description={threeOfKind.description}
                 doScore={evt => doScore("threeOfKind", threeOfKind.evalRoll)}
+                rolling={rolling}
               />
               <RuleRow
                 name="Four of Kind"
                 score={scores.fourOfKind}
                 description={fourOfKind.description}
                 doScore={evt => doScore("fourOfKind", fourOfKind.evalRoll)}
+                rolling={rolling}
               />
               <RuleRow
                 name="Full House"
                 score={scores.fullHouse}
                 description={fullHouse.description}
                 doScore={evt => doScore("fullHouse", fullHouse.evalRoll)}
+                rolling={rolling}
               />
               <RuleRow
                 name="Small Straight"
@@ -103,6 +112,7 @@ class ScoreTable extends Component {
                 doScore={evt =>
                   doScore("smallStraight", smallStraight.evalRoll)
                 }
+                rolling={rolling}
               />
               <RuleRow
                 name="Large Straight"
@@ -111,18 +121,21 @@ class ScoreTable extends Component {
                 doScore={evt =>
                   doScore("largeStraight", largeStraight.evalRoll)
                 }
+                rolling={rolling}
               />
               <RuleRow
                 name="Yahtzee"
                 score={scores.yahtzee}
                 description={yahtzee.description}
                 doScore={evt => doScore("yahtzee", yahtzee.evalRoll)}
+                rolling={rolling}
               />
               <RuleRow
                 name="Chance"
                 score={scores.chance}
                 description={chance.description}
                 doScore={evt => doScore("chance", chance.evalRoll)}
+                rolling={rolling}
               />
             </tbody>
           </table>
