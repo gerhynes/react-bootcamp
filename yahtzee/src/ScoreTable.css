@@ -10,10 +10,17 @@
 .ScoreTable table {
   width: 100%;
   margin: 0 auto;
-  min-width: 400px;
 }
 
 .ScoreTable-section {
   vertical-align: top;
   width: 100%;
+}
+
+.ScoreTable-section-title,
+.ScoreTable-total {
+  font-weight: 100;
+  font-size: 2em;
+  border-bottom: 2px solid purple;
+  display: inline-block;
 }

@@ -32,7 +32,7 @@ class ScoreTable extends Component {
     return (
       <div className="ScoreTable">
         <section className="ScoreTable-section">
-          <h2>Upper</h2>
+          <h2 className="ScoreTable-section-title">Upper</h2>
           <table cellSpacing="0">
             <tbody>
               <RuleRow
@@ -81,7 +81,7 @@ class ScoreTable extends Component {
           </table>
         </section>
         <section className="ScoreTable-section ScoreTable-section-lower">
-          <h2>Lower</h2>
+          <h2 className="ScoreTable-section-title">Lower</h2>
           <table cellSpacing="0">
             <tbody>
               <RuleRow
@@ -140,7 +140,9 @@ class ScoreTable extends Component {
             </tbody>
           </table>
         </section>
-        <h2>Total Score: {this.getTotalScore()}</h2>
+        <h2 className="ScoreTable-total">
+          Total Score: {this.getTotalScore()}
+        </h2>
       </div>
     );
   }

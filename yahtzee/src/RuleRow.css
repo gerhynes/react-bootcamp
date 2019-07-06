@@ -1,5 +1,7 @@
 .RuleRow {
   transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 .RuleRow-active:hover {
   cursor: pointer;
@@ -39,7 +41,7 @@
   border-bottom: solid 1px black;
 }
 
-.RuleRow-name {
+/* .RuleRow-name {
   width: 50%;
   text-align: left;
 }
@@ -47,4 +49,21 @@
 .RuleRow-score {
   width: 50%;
   text-align: right;
+} */
+
+@media (min-width: 576px) {
+  .RuleRow {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .RuleRow-name {
+    width: 50%;
+    text-align: left;
+  }
+
+  .RuleRow-score {
+    width: 50%;
+    text-align: right;
+  }
 }
