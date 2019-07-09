@@ -6,7 +6,8 @@ export default class Deck extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      deck: null
+      deck: null,
+      drawn: []
     };
     this.getCard = this.getCard.bind(this);
   }
@@ -15,12 +16,30 @@ export default class Deck extends Component {
     this.setState({ deck: deck.data });
   }
   async getCard() {
-    // make request using deck id
-    let id = this.state.deck.deck_id;
-    let cardUrl = `${API_BASE_URL}/${id}/draw/`;
-    let cardRes = await axios.get(cardUrl);
-    console.log(cardRes.data);
-    // set state using new card info from api
+    let deck_id = this.state.deck.deck_id;
+    try {
+      let cardUrl = `${API_BASE_URL}/${deck_id}/draw/`;
+      let cardRes = await axios.get(cardUrl);
+      if (!cardRes.data.success) {
+        throw new Error("No cards remaining");
+      }
+
+      let card = cardRes.data.cards[0];
+      console.log(cardRes.data);
+
+      this.setState(st => ({
+        drawn: [
+          ...st.drawn,
+          {
+            id: card.code,
+            image: card.image,
+            name: `${card.value} OF ${card.suit}`
+          }
+        ]
+      }));
+    } catch (err) {
+      alert(err);
+    }
   }
   render() {
     return (
