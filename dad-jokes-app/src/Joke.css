@@ -1,5 +1,6 @@
 .Joke {
   display: flex;
+  flex-direction: column;
   border-bottom: 2px solid #eee;
   align-items: center;
   justify-content: center;
@@ -13,11 +14,13 @@
   justify-content: center;
   width: 15%;
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .Joke-text {
-  width: 75%;
+  width: 90%;
   font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .Joke-votes {
@@ -80,7 +83,6 @@
 
 .Joke-smiley {
   font-size: 3rem;
-  margin-left: auto;
   border-radius: 50%;
   box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1);
 }
@@ -107,5 +109,15 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .Joke {
+    flex-direction: row;
+  }
+  .Joke-text {
+    width: 75%;
+    margin-right: 1rem;
   }
 }
