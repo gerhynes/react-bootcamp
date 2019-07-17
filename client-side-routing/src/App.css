@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  display: flex;
+  background: rgba(240, 98, 146, 1);
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-nav {
+  width: 50%;
+  display: flex;
+  margin: 1rem auto;
+  justify-content: space-around;
+}
+
+.active-link {
+  color: pink;
+  border-bottom: 1px solid white;
+}
+
+a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+
+.App-nav a:hover {
+  /* border-bottom: 1px solid rgba(248, 187, 208, 1); */
+  color: rgba(248, 187, 208, 1);
+  cursor: pointer;
+}
+
+.App-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #ef5777;
+  border: 1px solid black;
+}
+
+img {
+  width: 30%;
+}
+
+.Dog,
+.About,
+.Contact {
+  width: 1000px;
+  height: 800px;
+  background: white;
+  border: 1px solid black;
+  box-shadow: 20px 20px 0 black;
+}
+
+h1 {
+  font-size: 4rem;
+}
