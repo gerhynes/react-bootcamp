@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Chips from "./Chips";
 import Sardines from "./Sardines";
 import Soda from "./Soda";
@@ -10,10 +10,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <VendingMachine />
-        <Chips />
-        <Soda />
-        <Sardines />
+        <Switch>
+          <Route exact path="/" render={() => <VendingMachine />} />
+          <Route exact path="/soda" render={() => <Soda />} />
+          <Route exact path="/chips" render={() => <Chips />} />
+          <Route exact path="/sardines" render={() => <Sardines />} />
+        </Switch>
       </div>
     );
   }
