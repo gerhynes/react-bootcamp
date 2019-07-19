@@ -1,0 +1,17 @@
+.Navbar {
+  background: rgba(69, 90, 100, 1);
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Navbar-link {
+  text-decoration: none;
+  color: rgba(144, 164, 174, 1);
+  transition: all 0.5s ease;
+}
+
+.Navbar-active {
+  color: #fff;
+}
