@@ -1,6 +1,6 @@
 .VendingMachine {
   text-align: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-size: cover;
   display: flex;
@@ -10,6 +10,13 @@
 
 .VendingMachine .Message {
   width: 30%;
+}
+
+.VendingMachine .Message > * {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  padding: 1rem;
 }
 
 a {

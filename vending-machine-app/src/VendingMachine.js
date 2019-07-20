@@ -12,17 +12,19 @@ export default class VendingMachine extends Component {
         style={{ backgroundImage: `url(${vendingMachineImg})` }}
       >
         <Message>
-          <h1>hello i am a vending machine. what would you like to eat?</h1>
+          <h1>Hello I am a vending machine. What would you like to eat?</h1>
         </Message>
-        <Link exact to="/soda">
-          Soda
-        </Link>
-        <Link exact to="/chips">
-          Chips
-        </Link>
-        <Link exact to="/sardines">
-          Fresh Sardines
-        </Link>
+        <Message>
+          <Link exact to="/soda">
+            Soda
+          </Link>
+          <Link exact to="/chips">
+            Chips
+          </Link>
+          <Link exact to="/sardines">
+            Fresh Sardines
+          </Link>
+        </Message>
       </div>
     );
   }

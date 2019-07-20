@@ -4,6 +4,7 @@
   padding: 1.5rem;
   display: flex;
   justify-content: space-around;
+  position: absolute;
 }
 
 .Navbar-link {

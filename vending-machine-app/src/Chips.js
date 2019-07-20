@@ -37,9 +37,9 @@ class Chips extends Component {
         <Message>
           <h1>bags eaten: {this.state.bags.length}</h1>
           <button onClick={this.handleClick}>nom nom nom</button>
-          <h1>
+          <h2>
             <Link to="/">Go Back</Link>
-          </h1>
+          </h2>
         </Message>
         {bags}
       </div>

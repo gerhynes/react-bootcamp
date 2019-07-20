@@ -15,7 +15,6 @@ class Soda extends Component {
           <p>(I still miss Soda)</p>
           <Link to="/">Go Back</Link>
         </Message>
-
         <img src={sodaImg} alt="coca cola can" />
       </div>
     );
