@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./FoodSearch.css";
 
 export default class FoodSearch extends Component {
   constructor(props) {
@@ -29,8 +30,12 @@ export default class FoodSearch extends Component {
           value={this.state.query}
           onChange={this.handleChange}
         />
-        <Link to={`/food/${this.state.query}`}>Go!</Link>
-        <button onClick={this.handleClick}>Save New Food</button>
+        <Link className="btn" to={`/food/${this.state.query}`}>
+          Go!
+        </Link>
+        <button className="btn" onClick={this.handleClick}>
+          Save New Food
+        </button>
       </div>
     );
   }
