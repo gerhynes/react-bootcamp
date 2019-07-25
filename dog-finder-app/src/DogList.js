@@ -6,7 +6,7 @@ export default class extends Component {
   render() {
     return (
       <div className="DogList">
-        <h1 className="display-1 text-center my-4">Give a dog a good home</h1>
+        <h1 className="display-1 text-center my-4">Give a dog a home today</h1>
         <div className="row">
           {this.props.dogs.map(d => {
             return (
