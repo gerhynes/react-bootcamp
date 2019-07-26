@@ -1,42 +1,42 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
 import Routes from "./Routes";
-import whiskey from "./imgs/whiskey.jpg";
-import tubby from "./imgs/tubby.jpg";
-import hazel from "./imgs/hazel.jpg";
+import brett from "./imgs/brett.jpg";
+import caesar from "./imgs/caesar.jpg";
+import dom from "./imgs/dom.jpg";
 import "./App.css";
 
 class App extends Component {
   static defaultProps = {
     dogs: [
       {
-        name: "Whiskey",
+        name: "Brett",
         age: 5,
-        src: whiskey,
+        src: brett,
         facts: [
-          "Whiskey loves eating popcorn.",
-          "Whiskey is a terrible guard dog.",
-          "Whiskey wants to cuddle with you!"
+          "Brett loves eating popcorn.",
+          "Brett is a terrible guard dog.",
+          "Brett wants to cuddle with you!"
         ]
       },
       {
-        name: "Hazel",
+        name: "Caesar",
         age: 3,
-        src: hazel,
+        src: caesar,
         facts: [
-          "Hazel has soooo much energy!",
-          "Hazel is highly intelligent.",
-          "Hazel loves people more than dogs."
+          "Caesar has soooo much energy!",
+          "Caesar is highly intelligent.",
+          "Caesar loves people more than dogs."
         ]
       },
       {
-        name: "Tubby",
+        name: "Dom",
         age: 4,
-        src: tubby,
+        src: dom,
         facts: [
-          "Tubby is not the brightest dog",
-          "Tubby does not like walks or exercise.",
-          "Tubby loves eating food."
+          "Dom is not the brightest dog",
+          "Dom does not like walks or exercise.",
+          "Dom loves eating food."
         ]
       }
     ]

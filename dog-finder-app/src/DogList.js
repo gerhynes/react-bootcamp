@@ -11,9 +11,11 @@ export default class extends Component {
           {this.props.dogs.map(d => {
             return (
               <div className="col-md-6 col-lg-4 text-center Dog" key={d.name}>
-                <Link to={`/dogs/${d.name}`}>
-                  <img src={d.src} alt={d.name} />
-                  <h3 className="underline mt-3">{d.name}</h3>
+                <Link className="card" to={`/dogs/${d.name}`}>
+                  <img className="card-img-top" src={d.src} alt={d.name} />
+                  <div className="card-body">
+                    <h3 className="card-title underline mt-3">{d.name}</h3>
+                  </div>
                 </Link>
               </div>
             );
