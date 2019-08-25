@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import "./SWMovies.css";
 
 export default function SWMovies() {
@@ -26,12 +27,8 @@ export default function SWMovies() {
         <option value="7">VII</option>
       </select>
 
-      <div className="crawl-container">
-        <div className="crawl">
-          <h2> {movie.title}</h2>
-          <p>{movie.opening_crawl}</p>
-        </div>
-      </div>
+      <h2> {movie.title}</h2>
+      <p>{movie.opening_crawl}</p>
     </div>
   );
 }
