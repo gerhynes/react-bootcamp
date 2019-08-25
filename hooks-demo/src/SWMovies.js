@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import "./SWMovies.css";
 
 export default function SWMovies() {
@@ -14,6 +13,7 @@ export default function SWMovies() {
     }
     getData();
   }, [number]);
+  const numerals = ["I", "II", "III", "IV", "V", "VI", "VII"];
   return (
     <div className="SWMovies">
       <h1>Pick a Star Wars Film</h1>
@@ -27,8 +27,15 @@ export default function SWMovies() {
         <option value="7">VII</option>
       </select>
 
-      <h2> {movie.title}</h2>
-      <p>{movie.opening_crawl}</p>
+      <div className="crawl">
+        <div className="crawl__content">
+          <h2 className="crawl__movie-number">
+            Episode {numerals[movie.episode_id - 1]}
+          </h2>
+          <h2 className="crawl__movie-title"> {movie.title}</h2>
+          <p className="crawl__text">{movie.opening_crawl}</p>
+        </div>
+      </div>
     </div>
   );
 }
