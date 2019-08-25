@@ -1,0 +1,68 @@
+.SWMovies {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Russo One", sans-serif;
+}
+
+h1 {
+  color: #ffe300;
+  margin: 1rem;
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  margin: 1rem auto;
+  max-width: 900px;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+select {
+  font-size: 4rem;
+  color: #ffe300;
+  background: black;
+  border: 1px solid grey;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.crawl-container {
+  display: flex;
+  justify-content: center;
+  height: 800px;
+  perspective: 400px;
+  font-size: 500%;
+}
+
+.crawl {
+  line-height: 1.5;
+  position: relative;
+  top: 100px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
+
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
