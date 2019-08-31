@@ -22,7 +22,7 @@ class Navbar extends Component {
               </span>
             </IconButton>
             <Typography className={classes.title} variant="h6" color="inherit">
-              App Title
+              Hooks Login
             </Typography>
             <Switch />
             <div className={classes.grow} />
