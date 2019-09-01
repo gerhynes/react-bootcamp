@@ -43,7 +43,7 @@ const words = {
   },
   italiano: {
     signIn: "Accedi",
-    email: "Indirizzo Email",
+    email: "Email",
     password: "Password",
     rememberMe: "Ricordami"
   }
