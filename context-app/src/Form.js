@@ -41,6 +41,12 @@ const words = {
     password: "Passwort",
     rememberMe: "Angemeldet bleiben"
   },
+  español: {
+    signIn: "Iniciar sesión",
+    email: "Correo",
+    password: "Contraseña",
+    rememberMe: "Recordar mis datos"
+  },
   italiano: {
     signIn: "Accedi",
     email: "Email",
@@ -67,6 +73,7 @@ class Form extends Component {
             <MenuItem value="gaeilge">Gaeilge</MenuItem>
             <MenuItem value="français">Français</MenuItem>
             <MenuItem value="deutsch">Deutsch</MenuItem>
+            <MenuItem value="español">Español</MenuItem>
             <MenuItem value="italiano">Italiano</MenuItem>
           </Select>
           <form className={classes.form}>
