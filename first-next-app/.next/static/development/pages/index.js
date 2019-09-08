@@ -12001,7 +12001,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 
 
-var _jsxFileName = "/mnt/c/Users/Gerard/Desktop/DEV/react-bootcamp/first-next-app/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -12027,52 +12026,13 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 var Index = function Index(_ref) {
   var posts = _ref.posts;
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, __jsx("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, "Out Index Page"), __jsx("h2", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, "Posts:"), __jsx("ul", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, posts.map(function (post) {
+  return __jsx("div", null, __jsx("h1", null, "Out Index Page"), __jsx("h2", null, "Posts:"), __jsx("ul", null, posts.map(function (post) {
     return __jsx("li", {
-      key: post.id,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 32
-      },
-      __self: this
+      key: post.id
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
       href: "/post?id=".concat(post.id),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 33
-      },
-      __self: this
-    }, __jsx("a", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 34
-      },
-      __self: this
-    }, post.title)));
+      as: "/p/".concat(post.id)
+    }, __jsx("a", null, post.title)));
   })));
 };
 
