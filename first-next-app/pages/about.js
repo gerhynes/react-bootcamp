@@ -1,6 +1,9 @@
 const AboutPage = () => {
-  console.log("*********RUNNING ABOUT COMPONENT********");
-  return <h1>This is the About Page</h1>;
+  return (
+    <div>
+      <h1>This is the About Page</h1>
+    </div>
+  );
 };
 
 export default AboutPage;
