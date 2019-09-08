@@ -104,24 +104,76 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/mnt/c/Users/Gerard/Desktop/DEV/react-bootcamp/first-next-app/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // import React, { Component } from "react";
+// class Index extends Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   static async getInitialProps() {
+//     const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+//     const { data } = res;
+//     return { posts: data };
+//   }
+//   render() {
+// const { posts } = this.props;
+//     return (
+//       <div>
+//         <h1>Our Index Page</h1>
+//       </div>
+//     );
+//   }
+// }
 
-const Index = () => {
+const Index = ({
+  posts
+}) => {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 26
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 27
     },
     __self: undefined
-  }, "Our Index Page"));
+  }, "Out Index Page"), __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }, "Posts:"), __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, posts.map(post => __jsx("li", {
+    key: post.id,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }, post.title))));
+};
+
+Index.getInitialProps = async () => {
+  const res = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("https://jsonplaceholder.typicode.com/posts");
+  const {
+    data
+  } = res;
+  return {
+    posts: data
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
@@ -137,6 +189,17 @@ const Index = () => {
 
 module.exports = __webpack_require__(/*! /mnt/c/Users/Gerard/Desktop/DEV/react-bootcamp/first-next-app/pages/index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 
