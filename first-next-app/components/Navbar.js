@@ -4,7 +4,8 @@ const Navbar = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-around",
-    background: "lightgrey",
+    background: "grey",
+    color: "#fff",
     padding: "1rem"
   };
   return (
