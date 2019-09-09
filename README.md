@@ -2,6 +2,8 @@
 
 Projects, exercises, and notes for Colt Steele's Modern React Bootcamp course.
 
+![Collage of React projects](https://res.cloudinary.com/gerhynes/image/upload/v1568057443/React_projects_v1gomo.png)
+
 ## Projects
 
 - [Colour Palette Generator](https://github.com/GK-Hynes/react-colours)
